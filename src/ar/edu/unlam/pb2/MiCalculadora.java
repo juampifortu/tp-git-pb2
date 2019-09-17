@@ -6,6 +6,17 @@ import java.util.Scanner;
 			
 		static Integer resultado=0;
 		
+		public static void Division (Integer a, Integer b) {
+			if(b!=0){
+			resultado = a / b;
+			}
+			else{
+				System.out.println("No se puede dividir por cero");
+			}
+			
+			System.out.println("El resultado es " + resultado.toString());
+		}
+		
 		public static void Multiplicacion(Integer a, Integer b) {
 			resultado = a * b;
 			System.out.println("El resultado es " + resultado.toString());
@@ -48,12 +59,7 @@ import java.util.Scanner;
 			break;
 			
 		case 4:
-			if(b!=0){
-			resultado = a / b;
-			}
-			else{
-				System.out.println("No se puede dividir por cero");
-			}
+			Division(a,b);
 			}
 		
 		
