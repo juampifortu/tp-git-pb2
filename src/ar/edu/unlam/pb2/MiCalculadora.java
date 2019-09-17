@@ -16,7 +16,7 @@ import java.util.Scanner;
 		
 		
 		do{
-		System.out.println("Ingrese su operación /n 1 para sumar /n 2 para restar /n 3 para multiplicar /n 4 para dividir");
+		System.out.println("Ingrese su operación \n 1 para sumar \n 2 para restar \n 3 para multiplicar \n 4 para dividir");
 		opcion = teclado.nextInt();
 		}while(opcion < 1 && opcion > 4);
 			
@@ -24,16 +24,31 @@ import java.util.Scanner;
 		a = teclado.nextInt();
 		
 		System.out.println("Ingrese el segundo numero");
-		a = teclado.nextInt();
-		if(opcion.equals(1)){
-		resultado = a + b;
-		}else if(opcion.equals(2)){
-		resultado = a - b;
-		}else if(opcion.equals(3)){
-		resultado = a * b;
-		}else{
-		resultado = a / b;
-		}
+		b = teclado.nextInt();
+		
+		switch(opcion){
+		
+		case 1:
+			resultado= a + b;
+			break;
+		
+		case 2:
+			resultado = a - b;
+			break;
+		
+		case 3:
+			resultado = a * b;
+			break;
+			
+		case 4:
+			if(b!=0){
+			resultado = a / b;
+			}
+			else{
+				System.out.println("No se puede dividir por cero");
+			}
+			}
+		
 		System.out.println("El resultado es " + resultado.toString());
 		}
 	
