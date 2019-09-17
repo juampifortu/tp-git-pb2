@@ -4,17 +4,35 @@ import java.util.Scanner;
 
 	public class MiCalculadora {
 		
+					
+			private static Scanner teclado;
+			static Integer resultado = 0;
+			
+			
+			public static void sumar(Integer a2, Integer b2) {
+			
+			resultado = a2 + b2;
+		}
+			
+			
+			public static void restar(Integer a2, Integer b2) {
+				
+				resultado = a2 -b2;
+				
+			}
 		public static void main(String[] args) {
-		
 		Scanner teclado;
 		teclado=new Scanner(System.in);
 		
+		
+
 		Integer a=0;
 		Integer b=0;
 		Integer opcion=null;
 		Integer resultado=0;
 		
 		
+	
 		do{
 		System.out.println("Ingrese su operación \n 1 para restar \n 2 para sumar \n 3 para multiplicar \n 4 para dividir");
 		opcion = teclado.nextInt();
@@ -30,10 +48,12 @@ import java.util.Scanner;
 		
 		case 1:
 			resultado= a - b;
+			restar(a,b);
 			break;
 		
 		case 2:
 			resultado = a + b;
+			sumar(a,b);
 			break;
 		
 		case 3:
