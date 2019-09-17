@@ -16,7 +16,7 @@ import java.util.Scanner;
 		
 		
 		do{
-		System.out.println("Ingrese su operación \n 1 para sumar \n 2 para restar \n 3 para multiplicar \n 4 para dividir");
+		System.out.println("Ingrese su operación \n 1 para restar \n 2 para sumar \n 3 para multiplicar \n 4 para dividir");
 		opcion = teclado.nextInt();
 		}while(opcion < 1 && opcion > 4);
 			
@@ -29,11 +29,11 @@ import java.util.Scanner;
 		switch(opcion){
 		
 		case 1:
-			resultado= a + b;
+			resultado= a - b;
 			break;
 		
 		case 2:
-			resultado = a - b;
+			resultado = a + b;
 			break;
 		
 		case 3:
