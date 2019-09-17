@@ -3,6 +3,13 @@ package ar.edu.unlam.pb2;
 import java.util.Scanner;
 
 	public class MiCalculadora {
+			
+		static Integer resultado=0;
+		
+		public static void Multiplicacion(Integer a, Integer b) {
+			resultado = a * b;
+			System.out.println("El resultado es " + resultado.toString());
+		}
 		
 		public static void main(String[] args) {
 		
@@ -37,7 +44,7 @@ import java.util.Scanner;
 			break;
 		
 		case 3:
-			resultado = a * b;
+			Multiplicacion(a,b);
 			break;
 			
 		case 4:
@@ -49,7 +56,7 @@ import java.util.Scanner;
 			}
 			}
 		
-		System.out.println("El resultado es " + resultado.toString());
+		
 		}
 	
 		}
